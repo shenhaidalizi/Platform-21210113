@@ -8,9 +8,18 @@ window.onload = function() {
         search();
     });
 
+    document.onkeydown=function(event){
+        var e=event||window.event||arguments.callee.caller.arguments[0];
+        if(e && e.keyCode == 13){
+            alert("enter!");
+            search();
+        }
+    }
+    
+
     document.getElementById('top-right').addEventListener('click',function(){
         clickLogin();
-    })
+    });
 }
 
 function search() {
